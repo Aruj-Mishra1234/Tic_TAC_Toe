@@ -13,9 +13,11 @@ class Game
         cout << '\n';
         Player player1(name1), player2(name2); 
         currGame.show();
+        system("pause");
         int row, col;
         for (int turn = 0; turn < 9; turn++)
         {
+            system("cls");
             if (!(turn & 1))
             {
                 player1.askToPlay();
@@ -64,6 +66,7 @@ class Game
                     turn--;
                 }
             }
+            system("pause");
         }
         cout << "Nobody Wins. Its a draw.\n";
         return;
